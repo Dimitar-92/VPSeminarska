@@ -18,7 +18,7 @@ namespace Igra_za_proektnu
             visina = 80;
             zaBrisenje = keseBrise = false;
             animacija = AllAnimations.enemy_2_stand;
-            Vx = (float)Form1.rand.NextDouble() * 4 + 4;
+            Vx = (float)GlavenPogled.rand.NextDouble() * 4 + 4;
             nitkaBrisi = new System.Threading.Thread(new System.Threading.ThreadStart(CekajPaBrisi));
         }
 
@@ -35,7 +35,7 @@ namespace Igra_za_proektnu
             zaBrisenje = true;
             animacija = AllAnimations.enemy_2_dead;
             nitkaBrisi.Start();
-            Vx = Form1.brznPozd;
+            Vx = GlavenPogled.brznPozd;
             --Covece.krv;
             //Form1.ff.textBoxKrv.Text = string.Format("{0} %", Covece.krv);
         }

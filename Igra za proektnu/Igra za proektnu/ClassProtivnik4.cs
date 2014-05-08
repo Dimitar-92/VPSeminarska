@@ -18,7 +18,7 @@ namespace Igra_za_proektnu
             visina = 100;
             zaBrisenje = keseBrise = false;
             animacija = AllAnimations.enemy_4_run;
-            Vx = (float)Form1.rand.NextDouble() * 4 + 4;
+            Vx = (float)GlavenPogled.rand.NextDouble() * 4 + 4;
             nitkaBrisi = new System.Threading.Thread(new System.Threading.ThreadStart(CekajPaBrisi));
         }
         
@@ -35,7 +35,7 @@ namespace Igra_za_proektnu
             zaBrisenje = true;
             //animacija = Properties.Resources.zombie_walking_T;
             nitkaBrisi.Start();
-            Vx = Form1.brznPozd;
+            Vx = GlavenPogled.brznPozd;
             ++Covece.poeni;
             //Form1.ff.textBoxPoeni.Text = string.Format("{0} $", Covece.poeni);
         }

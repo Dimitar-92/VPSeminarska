@@ -16,6 +16,7 @@ namespace Igra_za_proektnu
         public static Animacija enemy_3_dead;
         public static Animacija enemy_4_run;
         public static Animacija enemy_5_run;
+        public static Animacija enemy_5_dead;
 
         public static void InicijalizacijaAnimacii()
         {
@@ -23,7 +24,7 @@ namespace Igra_za_proektnu
                 true);
             main_jump = new Animacija(new string[] { "images/main_character/jump/1.png", "images/main_character/jump/2.png",
                 "images/main_character/jump/3.png", "images/main_character/jump/4.png" },
-                true);
+                false);
             enemy_run = new Animacija(new string[] { "images/protivnik_1/run/1.png", "images/protivnik_1/run/2.png",
                 "images/protivnik_1/run/3.png", "images/protivnik_1/run/4.png", "images/protivnik_1/run/5.png"},
                 true);
@@ -42,6 +43,9 @@ namespace Igra_za_proektnu
             enemy_5_run = new Animacija(new string[] { "images/protivnik_5/run/1.png", "images/protivnik_5/run/2.png",
                 "images/protivnik_5/run/3.png" },
                 true);
+            enemy_5_dead = new Animacija(new string[] { "images/protivnik_5/dead/1.png", "images/protivnik_5/dead/2.png",
+                "images/protivnik_5/dead/3.png", "images/protivnik_5/dead/4.png", "images/protivnik_5/dead/5.png" },
+                false);
         }
 
         public static void Increment()
@@ -55,6 +59,7 @@ namespace Igra_za_proektnu
             enemy_3_dead.SlednaSlika();
             enemy_4_run.SlednaSlika();
             enemy_5_run.SlednaSlika();
+            enemy_5_dead.SlednaSlika();
         }
     }
 }
