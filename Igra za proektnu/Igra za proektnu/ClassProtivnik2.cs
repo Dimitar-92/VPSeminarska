@@ -22,21 +22,21 @@ namespace Igra_za_proektnu
             nitkaBrisi = new System.Threading.Thread(new System.Threading.ThreadStart(CekajPaBrisi));
         }
 
-        override public bool Kontakt(ClassCoveve Covece)
+        override public bool Kontakt(ClassHeroj Covece)
         {
             return Math.Abs(Covece.X + Covece.sirina * 0.5f - X - sirina * 0.5f) < 0.4f * (Covece.sirina + sirina) && Y + 8.0f < Covece.Y + Covece.visina;
         }
 
-        override public void Interakcija(ClassCoveve Covece)
+        override public void Interakcija(ClassHeroj Covece)
         {
-            Covece.brSkoka = ClassCoveve.MaxSkoka;
+            Covece.brSkoka = ClassHeroj.MaxSkoka;
             Covece.PocniSkok();
 
             zaBrisenje = true;
             animacija = AllAnimations.enemy_2_dead;
             nitkaBrisi.Start();
             Vx = GlavenPogled.brznPozd;
-            Covece.krv -= 15;
+            Covece.energija -= 15;
             //Form1.ff.textBoxKrv.Text = string.Format("{0} %", Covece.krv);
         }
 

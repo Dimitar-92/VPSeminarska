@@ -26,7 +26,6 @@ namespace Igra_za_proektnu
             {
                 Properties.Settings.Default.players = new StringCollection();
             }
-
             glavenPogled = new GlavenPogled();
             osnovenPogled = new OsnovenPogled();
             nacinIgra = new NacinIgra();

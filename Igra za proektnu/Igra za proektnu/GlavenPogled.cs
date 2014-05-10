@@ -15,7 +15,7 @@ namespace Igra_za_proektnu
         public static int brznPozd = 12;
         //Thread NoviProtivnici;
         private List<ClassProtivnik> protivnici;
-        private ClassCoveve Covece;
+        private ClassHeroj Covece;
         private Graphics grafIgra;
         private Graphics grafBMP;
         private Bitmap bmp;
@@ -42,7 +42,7 @@ namespace Igra_za_proektnu
             takt = 0;
             AllAnimations.InicijalizacijaAnimacii();
             protivnici = new List<ClassProtivnik>(16);
-            Covece = new ClassCoveve();
+            Covece = new ClassHeroj();
             rand = new Random();/*
             panelIgra.Size = new Size(972, 397);
             MessageBox.Show(panelIgra.Width+" "+ panelIgra.Height);*/
@@ -59,10 +59,10 @@ namespace Igra_za_proektnu
             nitkaDodadi.Start();
 
             grafIgra = panelIgra.CreateGraphics();
-            ClassCoveve.DolnaLinija = panelIgra.Height - Covece.visina - 4;
+            ClassHeroj.DolnaLinija = panelIgra.Height - Covece.visina - 4;
 
             Covece.X = panelIgra.Width / 2;
-            Covece.Y = ClassCoveve.DolnaLinija;
+            Covece.Y = ClassHeroj.DolnaLinija;
 
             panelIgra.Click += new EventHandler(priClick);
             panelIgra.DoubleClick += new EventHandler(priClick);
@@ -73,9 +73,9 @@ namespace Igra_za_proektnu
             bmpBlood.MakeTransparent();
             gpBlood.DrawImage(Properties.Resources.frame, 0, 0, pictureBlood.Width, pictureBlood.Height);
             gpBlood.DrawImage(Properties.Resources.progress, 0, 0, pictureBlood.Width, pictureBlood.Height);
-            gpBlood.DrawString(Covece.krv.ToString(), new System.Drawing.Font("Arial", 12), new SolidBrush(Color.White), pictureBlood.Width / 3, pictureBlood.Height / 3);  
+            gpBlood.DrawString(Covece.energija.ToString(), new System.Drawing.Font("Arial", 12), new SolidBrush(Color.White), pictureBlood.Width / 3, pictureBlood.Height / 3);  
             pictureBlood.Image = bmpBlood;
-            currentBlood = (float)pictureBlood.Width / Covece.krv;
+            currentBlood = (float)pictureBlood.Width / Covece.energija;
 
             bmpPoints = new Bitmap(picturePoints.Width, picturePoints.Height);
             gpPoints = Graphics.FromImage(bmpPoints);
@@ -158,8 +158,8 @@ namespace Igra_za_proektnu
 
             gpBlood.Clear(Color.Transparent);
             gpBlood.DrawImage(Properties.Resources.frame, 0, 0, pictureBlood.Width, pictureBlood.Height);
-            gpBlood.DrawImage(Properties.Resources.progress, 0, 0, Covece.krv * currentBlood, pictureBlood.Height);
-            gpBlood.DrawString(Covece.krv.ToString(), new System.Drawing.Font("Arial", 12), new SolidBrush(Color.White), pictureBlood.Width / 3, pictureBlood.Height / 3);  
+            gpBlood.DrawImage(Properties.Resources.progress, 0, 0, Covece.energija * currentBlood, pictureBlood.Height);
+            gpBlood.DrawString(Covece.energija.ToString(), new System.Drawing.Font("Arial", 12), new SolidBrush(Color.White), pictureBlood.Width / 3, pictureBlood.Height / 3);  
             pictureBlood.Image = bmpBlood;
 
             gpPoints.Clear(Color.Transparent);

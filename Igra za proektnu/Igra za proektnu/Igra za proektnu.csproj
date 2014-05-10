@@ -47,14 +47,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animacija.cs" />
-    <Compile Include="ClassCoveve.cs" />
+    <Compile Include="ClassHeroj.cs" />
     <Compile Include="ClassProtivnik.cs" />
     <Compile Include="ClassProtivnik5.cs" />
     <Compile Include="ClassProtivnik4.cs" />
     <Compile Include="ClassProtivnik1.cs" />
     <Compile Include="ClassProtivnik2.cs" />
     <Compile Include="Classprotivnik3.cs" />
-    <Compile Include="ClassVizuelenObiekt.cs" />
+    <Compile Include="ClassVisualObiect.cs" />
     <Compile Include="GlavenPogled.cs">
       <SubType>UserControl</SubType>
     </Compile>
