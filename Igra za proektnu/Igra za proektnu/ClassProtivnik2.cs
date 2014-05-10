@@ -36,7 +36,7 @@ namespace Igra_za_proektnu
             animacija = AllAnimations.enemy_2_dead;
             nitkaBrisi.Start();
             Vx = GlavenPogled.brznPozd;
-            --Covece.krv;
+            Covece.krv -= 15;
             //Form1.ff.textBoxKrv.Text = string.Format("{0} %", Covece.krv);
         }
 

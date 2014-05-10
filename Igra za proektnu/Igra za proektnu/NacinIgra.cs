@@ -15,5 +15,13 @@ namespace Igra_za_proektnu
         {
             InitializeComponent();
         }
+
+        private void btnNazad_Click(object sender, EventArgs e)
+        {
+            OsnovnaForma.osnovenPogled.Visible = true;
+            OsnovnaForma.glavenPogled.Visible = false;
+            OsnovnaForma.nacinIgra.Visible = false;
+            OsnovnaForma.rekordi.Visible = false;
+        }
     }
 }

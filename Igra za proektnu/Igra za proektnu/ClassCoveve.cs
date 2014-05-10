@@ -31,6 +31,7 @@ namespace Igra_za_proektnu
             visina = 107;
             brSkoka = MaxSkoka;
             animacija = AllAnimations.main_run;
+            //krv = blood;
         }
 
         public void PocniSkok()

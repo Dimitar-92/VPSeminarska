@@ -41,7 +41,7 @@ namespace Igra_za_proektnu
             animacija = AllAnimations.enemy_5_dead;
             nitkaBrisi.Start();
             Vx = GlavenPogled.brznPozd;
-            ++Covece.poeni;
+            Covece.poeni += 15;
             //Form1.ff.textBoxPoeni.Text = string.Format("{0} $", Covece.poeni);
         }
 

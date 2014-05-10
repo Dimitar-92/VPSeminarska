@@ -38,7 +38,7 @@ namespace Igra_za_proektnu
             animacija = AllAnimations.enemy_3_dead;
             AllAnimations.enemy_3_dead.Reset();
             nitkaBrisi.Start();
-            ++Covece.poeni;
+            Covece.poeni += 20;
             //Form1.ff.textBoxPoeni.Text = string.Format("{0} $", Covece.poeni);
         }
 

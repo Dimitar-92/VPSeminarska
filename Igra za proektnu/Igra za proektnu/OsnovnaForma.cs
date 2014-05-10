@@ -7,42 +7,67 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Threading;
+using System.Collections.Specialized;
 
 namespace Igra_za_proektnu
 {
     public partial class OsnovnaForma : Form
     {
-        //GlavenPogled glavenPogled;
+        public static GlavenPogled glavenPogled;
+        public static OsnovenPogled osnovenPogled;
+        public static NacinIgra nacinIgra;
+        public static Rekordi rekordi;
 
         public OsnovnaForma()
         {
             InitializeComponent();
 
-            //glavenPogled = new GlavenPogled();
-            //tlSvojstva.Controls.Add(glavenPogled);
-            //tlSvojstva.SetRow(glavenPogled, 1);
+            if (Properties.Settings.Default.players == null)
+            {
+                Properties.Settings.Default.players = new StringCollection();
+            }
 
-            izberiSvojstva.Visible = false;
+            glavenPogled = new GlavenPogled();
+            osnovenPogled = new OsnovenPogled();
+            nacinIgra = new NacinIgra();
+            rekordi = new Rekordi();
+
+            this.Controls.Add(glavenPogled);
+            this.Controls.Add(osnovenPogled);
+            this.Controls.Add(nacinIgra);
+            this.Controls.Add(rekordi);
+/*
+            tlSvojstva.SetRow(glavenPogled, 1);
+            tlSvojstva.SetRow(osnovenPogled, 1);
+            tlSvojstva.SetRow(nacinIgra, 1);
+            tlSvojstva.SetRow(rekordi, 1);
+            */
             osnovenPogled.Visible = true;
             glavenPogled.Visible = false;
+            nacinIgra.Visible = false;
+            rekordi.Visible = false;
 
         }
+
         protected override void OnClosed(EventArgs e)
         {
             base.OnClosed(e);
-            MessageBox.Show("Stoooop");
+            
+            Properties.Settings.Default.Save();
+            
         }
 
+        /*
         protected override CreateParams CreateParams
         {
             get
             {
                 CreateParams cp = base.CreateParams;
-                //if(glavenPogled != null && !glavenPogled.Visible)
-                //cp.ExStyle |= 0x02000000;  // Turn on WS_EX_COMPOSITED
+                if(glavenPogled != null && !glavenPogled.Visible)
+                cp.ExStyle |= 0x02000000;  // Turn on WS_EX_COMPOSITED
                 return cp;
             }
         }
-
+        */
     }
 }

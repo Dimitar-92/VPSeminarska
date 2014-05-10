@@ -36,7 +36,7 @@ namespace Igra_za_proektnu
             //animacija = Properties.Resources.zombie_walking_T;
             nitkaBrisi.Start();
             Vx = GlavenPogled.brznPozd;
-            ++Covece.poeni;
+            Covece.poeni += 30;
             //Form1.ff.textBoxPoeni.Text = string.Format("{0} $", Covece.poeni);
         }
 

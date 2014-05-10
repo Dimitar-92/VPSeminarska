@@ -29,6 +29,13 @@ namespace Igra_za_proektnu
 
         public static bool gluvce;
 
+        private Graphics gpBlood;
+        private Bitmap bmpBlood;
+        private float currentBlood;
+
+        private Graphics gpPoints;
+        private Bitmap bmpPoints;
+
         public GlavenPogled()
         {
             InitializeComponent();
@@ -60,6 +67,23 @@ namespace Igra_za_proektnu
             panelIgra.Click += new EventHandler(priClick);
             panelIgra.DoubleClick += new EventHandler(priClick);
             panelIgra.MouseMove += new MouseEventHandler(DviziGluvce);
+            
+            bmpBlood = new Bitmap(pictureBlood.Width, pictureBlood.Height);
+            gpBlood = Graphics.FromImage(bmpBlood);
+            bmpBlood.MakeTransparent();
+            gpBlood.DrawImage(Properties.Resources.frame, 0, 0, pictureBlood.Width, pictureBlood.Height);
+            gpBlood.DrawImage(Properties.Resources.progress, 0, 0, pictureBlood.Width, pictureBlood.Height);
+            gpBlood.DrawString(Covece.krv.ToString(), new System.Drawing.Font("Arial", 12), new SolidBrush(Color.White), pictureBlood.Width / 3, pictureBlood.Height / 3);  
+            pictureBlood.Image = bmpBlood;
+            currentBlood = (float)pictureBlood.Width / Covece.krv;
+
+            bmpPoints = new Bitmap(picturePoints.Width, picturePoints.Height);
+            gpPoints = Graphics.FromImage(bmpPoints);
+            bmpPoints.MakeTransparent();
+            gpPoints.DrawImage(Properties.Resources.apple, 0, 0, picturePoints.Width, picturePoints.Height);
+            gpPoints.DrawString(Covece.poeni.ToString(), new System.Drawing.Font("Arial", 12), new SolidBrush(Color.White), picturePoints.Width / 2 - 10, picturePoints.Height / 3);        
+            picturePoints.Image = bmpPoints;
+
         }
 
         private void DodadiNovProtivnik()
@@ -131,8 +155,18 @@ namespace Igra_za_proektnu
             }
             Covece.Crtaj(grafBMP);
             grafIgra.DrawImage(bmp, panelIgra.Location.X, panelIgra.Location.Y);
-            //textBoxKrv.Text = string.Format("{0} %", Covece.krv);
-            //textBoxPoeni.Text = string.Format("{0} $", Covece.poeni);
+
+            gpBlood.Clear(Color.Transparent);
+            gpBlood.DrawImage(Properties.Resources.frame, 0, 0, pictureBlood.Width, pictureBlood.Height);
+            gpBlood.DrawImage(Properties.Resources.progress, 0, 0, Covece.krv * currentBlood, pictureBlood.Height);
+            gpBlood.DrawString(Covece.krv.ToString(), new System.Drawing.Font("Arial", 12), new SolidBrush(Color.White), pictureBlood.Width / 3, pictureBlood.Height / 3);  
+            pictureBlood.Image = bmpBlood;
+
+            gpPoints.Clear(Color.Transparent);
+            gpPoints.DrawImage(Properties.Resources.apple, 0, 0, picturePoints.Width, picturePoints.Height);
+            gpPoints.DrawString(Covece.poeni.ToString(), new System.Drawing.Font("Arial", 12), new SolidBrush(Color.White), picturePoints.Width / 2 - 10, picturePoints.Height / 3);
+            picturePoints.Image = bmpPoints;
+
             takt++;
             if (takt == 6)
             {
@@ -143,9 +177,47 @@ namespace Igra_za_proektnu
 
         private void btnNazad_Click(object sender, EventArgs e)
         {
-            OsnovnaForma.izberiSvojstva.Visible = false;
+            NovRekord rekord = new NovRekord();
+            if (rekord.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                if(rekord.ime.Trim().Length != 0)
+                {
+                    int brojac = 0;
+                    for (int i = 0; i < Properties.Settings.Default.players.Count;i++ )
+                    {
+                        string[] tmpList = Properties.Settings.Default.players[i].Split(' ');
+                        if (tmpList[0].Trim().Equals(rekord.ime.Trim()))
+                        {
+                            Properties.Settings.Default.players[i] = string.Format("{0} {1}", tmpList[0], Covece.poeni.ToString());
+                            break;
+                        }
+                        else
+                        {
+                            brojac++;
+                        }
+                    }
+                    if(brojac.Equals(Properties.Settings.Default.players.Count))
+                    {
+                        Properties.Settings.Default.players.Add(string.Format("{0} {1}", rekord.ime, Covece.poeni.ToString()));
+                            
+                        MessageBox.Show("Успешно додавање!");
+                    }
+                    else
+                    {
+                    MessageBox.Show("Вашиот резултат е променет!");
+                    }
+                }   
+                
+            }
+            else
+            {
+                MessageBox.Show("Неуспешно додавање!");
+            }
+
             OsnovnaForma.osnovenPogled.Visible = true;
             OsnovnaForma.glavenPogled.Visible = false;
+            OsnovnaForma.nacinIgra.Visible = false;
+            OsnovnaForma.rekordi.Visible = false;
 
             panelIgra.Dispose();
         }
