@@ -10,3 +10,4 @@ Nozete potseceni
 Trepkanje na paneli...
 Dime da najde druga slika za bomba (da odgovara na stilot)
 Site paneli da bidat so golemina kolku formata( da se vgnezduvaat vo nea)
+README- staven e samo proben, ima celosen word doc
