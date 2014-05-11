@@ -25,3 +25,6 @@ C:\Users\Dimitar\Desktop\Dimitar\FINKI\Трета Летен\Визуелно П
 C:\Users\Dimitar\Desktop\Dimitar\FINKI\Трета Летен\Визуелно Програмирање\Seminarska\Cat Runner\Cat Runner\obj\x86\Debug\Cat Runner.csproj.GenerateResource.Cache
 C:\Users\Dimitar\Desktop\Dimitar\FINKI\Трета Летен\Визуелно Програмирање\Seminarska\Cat Runner\Cat Runner\obj\x86\Debug\Cat Runner.exe
 C:\Users\Dimitar\Desktop\Dimitar\FINKI\Трета Летен\Визуелно Програмирање\Seminarska\Cat Runner\Cat Runner\obj\x86\Debug\Cat Runner.pdb
+C:\Users\Nate\Desktop\VP Seminarska\VPSeminarska\Cat Runner\Cat Runner\bin\Debug\Cat Runner.exe.config
+C:\Users\Nate\Desktop\VP Seminarska\VPSeminarska\Cat Runner\Cat Runner\obj\x86\Debug\Cat Runner.exe
+C:\Users\Nate\Desktop\VP Seminarska\VPSeminarska\Cat Runner\Cat Runner\obj\x86\Debug\Cat Runner.pdb
