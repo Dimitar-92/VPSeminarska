@@ -30,7 +30,8 @@ namespace Igra_za_proektnu
                 true);
             enemy_2_stand = new Animacija(new string[] { "images/protivnik_2/stand/1.png"},
                 true);
-            enemy_2_dead = new Animacija(new string[] { "images/protivnik_2/dead/1.gif" },
+            enemy_2_dead = new Animacija(new string[] { "images/protivnik_2/dead/1.png", "images/protivnik_2/dead/2.png",
+            "images/protivnik_2/dead/3.png", "images/protivnik_2/dead/4.png", "images/protivnik_2/dead/5.png"},
                 true);
             enemy_3_run = new Animacija(new string[] { "images/protivnik_3/run/1.png", "images/protivnik_3/run/2.png",
             "images/protivnik_3/run/3.png"},
