@@ -43,3 +43,5 @@ C:\Users\Dimitar\Downloads\VD LAB\Proektna\Igra za proektnu\Igra za proektnu\obj
 C:\Users\Dimitar\Downloads\VD LAB\Proektna\Igra za proektnu\Igra za proektnu\obj\x86\Debug\Igra za proektnu.exe
 C:\Users\Dimitar\Downloads\VD LAB\Proektna\Igra za proektnu\Igra za proektnu\obj\x86\Debug\Igra za proektnu.pdb
 C:\Users\Dimitar\Downloads\VD LAB\Proektna\Igra za proektnu\Igra za proektnu\obj\x86\Debug\Igra za proektnu.csprojResolveAssemblyReference.cache
+C:\Users\Dimitar\Desktop\Dimitar\FINKI\Трета Летен\Визуелно Програмирање\Seminarska\Igra za proektnu\Igra za proektnu\obj\x86\Debug\Igra za proektnu.exe
+C:\Users\Dimitar\Desktop\Dimitar\FINKI\Трета Летен\Визуелно Програмирање\Seminarska\Igra za proektnu\Igra za proektnu\obj\x86\Debug\Igra za proektnu.pdb
