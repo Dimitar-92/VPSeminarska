@@ -10,51 +10,41 @@ namespace Igra_za_proektnu
     public class ClassProtivnik5 : ClassProtivnik
     {
         private float Vx;
-        private System.Threading.Thread nitkaBrisi;
 
         public ClassProtivnik5()
         {
             sirina = 96;
             visina = 87;
-            zaBrisenje = keseBrise = false;
+            ubien = izbrisi = false;
             animacija = AllAnimations.enemy_5_run;
-            Vx = (float)GlavenPogled.rand.NextDouble() * 4 + GlavenPogled.brznPozd;
-            nitkaBrisi = new System.Threading.Thread(new System.Threading.ThreadStart(CekajPaBrisi));
-        }
-        
-        override public bool Kontakt(ClassHeroj Covece)
-        {
-            return Math.Abs(Covece.X + Covece.sirina * 0.5f - X - sirina * 0.5f) < 0.4f * (Covece.sirina + sirina) && Y + 8.0f < Covece.Y + Covece.visina && Y + 18.0f + Covece.Vy > Covece.Y + Covece.visina && Covece.Vy > 0;
+            Vx = (float)GlavenPogled.rand.NextDouble() * 4 + 4 + GlavenPogled.brznPozd;
         }
 
-        override public void Interakcija(ClassHeroj Covece)
+        public override bool Kontakt(ClassHeroj covece)
+        {
+            return Math.Abs(covece.X + covece.sirina * 0.5f - X - sirina * 0.5f) < (covece.sirina + sirina) * 0.5f && Y < covece.Y + covece.visina;
+        }
+
+        public override void Interakcija(ClassHeroj Covece)
         {
             Covece.brSkoka = ClassHeroj.MaxSkoka;
             Covece.PocniSkok();
 
-            Y -= 50;
-            
+            Y -= 50;            
             sirina = 150;
             visina = 140;
-            zaBrisenje = true;
-            AllAnimations.enemy_5_dead.Reset();
-            animacija = AllAnimations.enemy_5_dead;
-            nitkaBrisi.Start();
+            ubien = true;
             Vx = GlavenPogled.brznPozd;
-            Covece.poeni += 15;
-            //Form1.ff.textBoxPoeni.Text = string.Format("{0} $", Covece.poeni);
+            animacija = AllAnimations.enemy_5_dead;
+            animacija.Restart();
+            
+            Covece.energija -= 5;
         }
 
-        private void CekajPaBrisi()
+        public override void Pridvizi()
         {
-            System.Threading.Thread.Sleep(768);
-            keseBrise = true;
-            nitkaBrisi.Abort();
-        }
-
-        override public void Pridvizi()
-        {
-            if ((X -= Vx) + sirina < 20) zaBrisenje = keseBrise = true;
+            if (ubien && animacija.Zavrsi()) izbrisi = true;    else
+            if ((X -= Vx) + sirina < 20) ubien = izbrisi = true;
         }
     }
 }

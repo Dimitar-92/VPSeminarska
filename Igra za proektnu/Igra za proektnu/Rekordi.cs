@@ -40,7 +40,6 @@ namespace Igra_za_proektnu
                     lvi.SubItems.Add(tmpList[1]);
                     lvPlayers.Items.Add(lvi);
                 }
-
             }
         }
 
@@ -51,6 +50,5 @@ namespace Igra_za_proektnu
             OsnovnaForma.nacinIgra.Visible = false;
             OsnovnaForma.rekordi.Visible = false;
         }
-
     }
 }

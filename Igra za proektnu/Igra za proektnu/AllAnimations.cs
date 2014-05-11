@@ -9,10 +9,9 @@ namespace Igra_za_proektnu
     {
         public static Animacija main_run;
         public static Animacija main_jump;
-        public static Animacija enemy_run;
-        public static Animacija enemy_dead;
-        public static Animacija enemy_2_stand;
-        public static Animacija enemy_2_dead;
+        public static Animacija enemy_1_run;
+        public static Animacija enemy_1_dead;
+        public static Animacija enemy_2;
         public static Animacija enemy_3_run;
         public static Animacija enemy_3_dead;
         public static Animacija enemy_4_run;
@@ -20,24 +19,20 @@ namespace Igra_za_proektnu
         public static Animacija enemy_5_run;
         public static Animacija enemy_5_dead;
 
-        public static void InicijalizacijaAnimacii()
+        public static void InicijalizirajAnimacii()
         {
             main_run = new Animacija(new string[] { "images/main_character/run/1.png", "images/main_character/run/2.png" },
                 true);
             main_jump = new Animacija(new string[] { "images/main_character/jump/1.png", "images/main_character/jump/2.png",
                 "images/main_character/jump/3.png", "images/main_character/jump/4.png" },
                 false);
-            enemy_run = new Animacija(new string[] { "images/protivnik_1/run/1.png", "images/protivnik_1/run/2.png",
+            enemy_1_run = new Animacija(new string[] { "images/protivnik_1/run/1.png", "images/protivnik_1/run/2.png",
                 "images/protivnik_1/run/3.png", "images/protivnik_1/run/4.png", "images/protivnik_1/run/5.png"},
                 true);
-            enemy_dead = new Animacija(new string[] { "images/protivnik_1/dead/1.png", "images/protivnik_1/dead/2.png",
-                "images/protivnik_1/dead/3.png"},
+            enemy_1_dead = new Animacija(new string[] { "images/protivnik_1/dead/1.png", "images/protivnik_1/dead/2.png", "images/protivnik_1/dead/3.png" },
                 false);
-            enemy_2_stand = new Animacija(new string[] { "images/protivnik_2/stand/1.png"},
-                true);
-            enemy_2_dead = new Animacija(new string[] { "images/protivnik_2/dead/1.png", "images/protivnik_2/dead/2.png",
-            "images/protivnik_2/dead/3.png", "images/protivnik_2/dead/4.png", "images/protivnik_2/dead/5.png"},
-                true);
+            enemy_2 = new Animacija(new string[] { "images/protivnik_2/1.png" },
+                false);
             enemy_3_run = new Animacija(new string[] { "images/protivnik_3/run/1.png", "images/protivnik_3/run/2.png",
             "images/protivnik_3/run/3.png"},
                 true);
@@ -46,8 +41,7 @@ namespace Igra_za_proektnu
                 false);
             enemy_4_run = new Animacija(new string[] { "images/protivnik_4/run/1.png", "images/protivnik_4/run/2.png" },
                 true);
-            enemy_4_dead = new Animacija(new string[] { "images/protivnik_4/dead/1.png", "images/protivnik_4/dead/2.png",
-            "images/protivnik_4/dead/3.png"},
+            enemy_4_dead = new Animacija(new string[] { "images/protivnik_4/dead/1.png", "images/protivnik_4/dead/2.png", "images/protivnik_4/dead/3.png" },
                 false);
             enemy_5_run = new Animacija(new string[] { "images/protivnik_5/run/1.png", "images/protivnik_5/run/2.png",
                 "images/protivnik_5/run/3.png" },
@@ -57,14 +51,12 @@ namespace Igra_za_proektnu
                 false);
         }
 
-        public static void Increment()
+        public static void OsveziAnimacii()
         {
             main_run.SlednaSlika();
             main_jump.SlednaSlika();
-            enemy_run.SlednaSlika();
-            enemy_dead.SlednaSlika();
-            enemy_2_stand.SlednaSlika();
-            enemy_2_dead.SlednaSlika();
+            enemy_1_run.SlednaSlika();
+            enemy_1_dead.SlednaSlika();
             enemy_3_run.SlednaSlika();
             enemy_3_dead.SlednaSlika();
             enemy_4_run.SlednaSlika();

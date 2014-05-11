@@ -21,6 +21,7 @@ namespace Igra_za_proektnu
         public OsnovnaForma()
         {
             InitializeComponent();
+            this.BackgroundImage = new Bitmap("images/background/townscape.jpg");
 
             if (Properties.Settings.Default.players == null)
             {
@@ -31,33 +32,29 @@ namespace Igra_za_proektnu
             nacinIgra = new NacinIgra();
             rekordi = new Rekordi();
 
+            glavenPogled.Dock = DockStyle.Fill;
+            osnovenPogled.Dock = DockStyle.Fill;
+            nacinIgra.Dock = DockStyle.Fill;
+            rekordi.Dock = DockStyle.Fill;
+
             this.Controls.Add(glavenPogled);
             this.Controls.Add(osnovenPogled);
             this.Controls.Add(nacinIgra);
             this.Controls.Add(rekordi);
-/*
-            tlSvojstva.SetRow(glavenPogled, 1);
-            tlSvojstva.SetRow(osnovenPogled, 1);
-            tlSvojstva.SetRow(nacinIgra, 1);
-            tlSvojstva.SetRow(rekordi, 1);
-            */
+
             osnovenPogled.Visible = true;
             glavenPogled.Visible = false;
             nacinIgra.Visible = false;
             rekordi.Visible = false;
-
         }
 
         protected override void OnClosed(EventArgs e)
         {
             base.OnClosed(e);
-            
             Properties.Settings.Default.Save();
-            
         }
 
-        /*
-        protected override CreateParams CreateParams
+     /* protected override CreateParams CreateParams
         {
             get
             {
@@ -66,7 +63,6 @@ namespace Igra_za_proektnu
                 cp.ExStyle |= 0x02000000;  // Turn on WS_EX_COMPOSITED
                 return cp;
             }
-        }
-        */
+        } */
     }
 }

@@ -8,7 +8,7 @@ using System.Threading;
 
 namespace Igra_za_proektnu
 {
-    public class ClassHeroj : ClassVisualObiect
+    public class ClassHeroj : ClassVizuelenObjekt
     {
         public const int MaxVy = 16;
         public const int MaxSkoka = 2; // const ???
@@ -41,7 +41,7 @@ namespace Igra_za_proektnu
                 Vy = -MaxVy;
                 skoka = true;
                 animacija = AllAnimations.main_jump;
-                animacija.Reset();
+                animacija.Restart();
             }
         }
 

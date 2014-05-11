@@ -10,51 +10,46 @@ namespace Igra_za_proektnu
     public class ClassProtivnik4 : ClassProtivnik
     {
         private float Vx;
-        private System.Threading.Thread nitkaBrisi;
+        private System.Threading.Thread nitkaBrisi;/////////////
 
         public ClassProtivnik4()
         {
             sirina = 140;
             visina = 100;
-            zaBrisenje = keseBrise = false;
+            ubien = izbrisi = false;
             animacija = AllAnimations.enemy_4_run;
             Vx = (float)GlavenPogled.rand.NextDouble() * 4 + 4;
             nitkaBrisi = new System.Threading.Thread(new System.Threading.ThreadStart(CekajPaBrisi));
         }
-        
-        override public bool Kontakt(ClassHeroj Covece)
+
+        public override bool Kontakt(ClassHeroj Covece)
         {
             return Math.Abs(Covece.X + Covece.sirina * 0.5f - X - sirina * 0.5f) < 0.4f * (Covece.sirina + sirina) && Y + 8.0f < Covece.Y + Covece.visina && Y + 18.0f + Covece.Vy > Covece.Y + Covece.visina && Covece.Vy > 0;
         }
 
-        override public void Interakcija(ClassHeroj Covece)
+        public override void Interakcija(ClassHeroj Covece)
         {
             Covece.brSkoka = ClassHeroj.MaxSkoka;
             Covece.PocniSkok();
+            Covece.poeni += 5;
 
-            sirina = 140;
-            visina = 200;
-            //STOLE NEZNAM SO SE DESAVA SO VX:D Probav da podesam dimenzii ama ne mi izgledaat ok vidi
-            Vx = -100;
-            zaBrisenje = true;
+            ubien = true;
             animacija = AllAnimations.enemy_4_dead;
-            AllAnimations.enemy_4_dead.Reset();
+            animacija.Restart();
             nitkaBrisi.Start();
             Vx = GlavenPogled.brznPozd;
-            Covece.poeni += 30;
-            //Form1.ff.textBoxPoeni.Text = string.Format("{0} $", Covece.poeni);
         }
 
         private void CekajPaBrisi()
         {
             System.Threading.Thread.Sleep(768);
-            keseBrise = true;
+            izbrisi = true;
             nitkaBrisi.Abort();
         }
 
-        override public void Pridvizi()
+        public override void Pridvizi()
         {
-            if ((X -= Vx) + sirina < 20) zaBrisenje = keseBrise = true;
+            if ((X -= Vx) + sirina < 20) ubien = izbrisi = true;
         }
     }
 }

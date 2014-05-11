@@ -8,31 +8,29 @@ namespace Igra_za_proektnu
 {
     public class Animacija
     {
-        Bitmap[] images;
+        Bitmap[] sliki;
         int index;
         bool ne_stoi;
 
-        public Animacija(string [] image_paths, bool ne_stoi)
+        public Animacija(string [] pateki, bool ne_stoi)
         {
-            images = new Bitmap[image_paths.Length];
-            for (int i = 0; i < image_paths.Length; i++)
-            {
-                images[i] = new Bitmap(image_paths[i]);
-            }
-            index = 0;
+            sliki = new Bitmap[pateki.Length];
+            for (int i = 0; i < pateki.Length; i++)
+                sliki[i] = new Bitmap(pateki[i]);
             this.ne_stoi = ne_stoi;
+            index = 0;
         }
 
         public void Crtaj(Graphics g, float x, float y, float sirina, float visina)
         {
-            g.DrawImage(images[index], x, y, sirina, visina);
+            g.DrawImage(sliki[index], x, y, sirina, visina);
         }
 
         public void SlednaSlika()
         {
-            if (index+1 < images.Length)
+            if (index + 1 < sliki.Length)
             {
-                index++;
+                ++index;
             }
             else if (ne_stoi)
             {
@@ -40,9 +38,14 @@ namespace Igra_za_proektnu
             }
         }
 
-        public void Reset()
+        public void Restart()
         {
             index = 0;
+        }
+
+        public bool Zavrsi()
+        {
+            return !ne_stoi && index + 1 == sliki.Length;
         }
     }
 }

@@ -54,7 +54,7 @@
     <Compile Include="ClassProtivnik1.cs" />
     <Compile Include="ClassProtivnik2.cs" />
     <Compile Include="Classprotivnik3.cs" />
-    <Compile Include="ClassVisualObiect.cs" />
+    <Compile Include="ClassVizuelenObjekt.cs" />
     <Compile Include="GlavenPogled.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -86,6 +86,9 @@
       <DependentUpon>OsnovnaForma.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="ProgressEnergy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AllAnimations.cs" />
     <Compile Include="Rekordi.cs">
@@ -134,28 +137,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\zombie_walking_T.png" />
-    <None Include="Resources\bomb-transparent-e1376962436128.png" />
-    <None Include="Resources\3d_sword.png" />
-    <None Include="Resources\apple.gif" />
-    <None Include="Resources\dvoen_skok.png" />
-    <None Include="Resources\dvoen_skok1.png" />
-    <None Include="Resources\edinecen_skok.png" />
-    <None Include="Resources\cveke_skok.png" />
-    <Content Include="Resources\Eksplozija.gif" />
     <None Include="Resources\frame.gif" />
-    <None Include="Resources\heroj_puska.png" />
-    <Content Include="Resources\MAN RUNNING.gif" />
-    <None Include="Resources\Image1.gif" />
-    <None Include="Resources\Pozadina.gif" />
-    <None Include="Resources\skok.gif" />
-    <None Include="Resources\Pozadina1.gif" />
-    <None Include="Resources\townscape.jpg" />
     <None Include="Resources\puss.gif" />
     <None Include="Resources\puss in boots.png" />
     <None Include="Resources\progress.png" />
-    <None Include="Resources\skok.png" />
-    <Content Include="Resources\zombie.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

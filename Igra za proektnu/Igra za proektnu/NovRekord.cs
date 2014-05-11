@@ -13,9 +13,10 @@ namespace Igra_za_proektnu
     {
         public string ime;
 
-        public NovRekord()
+        public NovRekord(bool mozeNazad)
         {
             InitializeComponent();
+            btnOtkazi.Enabled = mozeNazad;
         }
 
         private void btnVnesi_Click(object sender, EventArgs e)
@@ -30,6 +31,7 @@ namespace Igra_za_proektnu
                 DialogResult = System.Windows.Forms.DialogResult.OK;
                 MessageBox.Show("Вашата игра не е зачувана");
             }
+            btnOtkazi.Enabled = true;
             this.Close();
         }
 
@@ -37,6 +39,12 @@ namespace Igra_za_proektnu
         {
             DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Close();
+        }
+
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            base.OnClosing(e);
+            e.Cancel = !btnOtkazi.Enabled;
         }
     }
 }

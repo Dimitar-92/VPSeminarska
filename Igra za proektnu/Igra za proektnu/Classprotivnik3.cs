@@ -10,23 +10,28 @@ namespace Igra_za_proektnu
     public class ClassProtivnik3 : ClassProtivnik
     {
         private bool start;
-        public float Vx, Vy, DolnaLinija;
-        private System.Threading.Thread nitkaBrisi;
+        private int doBrisenje;
+        private float Vx, Vy, DolnaLinija;
 
-        public ClassProtivnik3()
+        public ClassProtivnik3(float x, float y, float vx, float dl)
         {
+            Vy = -10;
             sirina = 80;
             visina = 80;
-            //Vy = -10;
             start = true;
-            zaBrisenje = keseBrise = false;
+            doBrisenje = 32;
+            ubien = izbrisi = false;
             animacija = AllAnimations.enemy_3_run;
-            nitkaBrisi = new System.Threading.Thread(new System.Threading.ThreadStart(CekajPaBrisi));
+
+            X = x;
+            Y = y;
+            Vx = vx;
+            DolnaLinija = dl - visina - 16;
         }
 
         override public bool Kontakt(ClassHeroj Covece)
         {
-            return Math.Abs(Covece.X + Covece.sirina * 0.5f - X - sirina * 0.5f) < 0.4f * (Covece.sirina + sirina) && Y + 8.0f < Covece.Y + Covece.visina && Covece.Vy > 0;
+            return Math.Abs(Covece.X + Covece.sirina * 0.5f - X - sirina * 0.5f) < 0.4f * (Covece.sirina + sirina) && Y + 8.0f < Covece.Y + Covece.visina && !start;
         }
 
         override public void Interakcija(ClassHeroj Covece)
@@ -34,23 +39,15 @@ namespace Igra_za_proektnu
             Covece.brSkoka = ClassHeroj.MaxSkoka;
             Covece.PocniSkok();
 
-            zaBrisenje = true;
+            ubien = true;
             animacija = AllAnimations.enemy_3_dead;
-            AllAnimations.enemy_3_dead.Reset();
-            nitkaBrisi.Start();
-            Covece.poeni += 20;
-            //Form1.ff.textBoxPoeni.Text = string.Format("{0} $", Covece.poeni);
-        }
-
-        private void CekajPaBrisi()
-        {
-            System.Threading.Thread.Sleep(768);
-            keseBrise = true;
-            nitkaBrisi.Abort();
+            animacija.Restart();
+            Covece.poeni += 2;
         }
 
         override public void Pridvizi()
         {
+            if (ubien && animacija.Zavrsi() && --doBrisenje <= 0) izbrisi = true;   else
             if (start)
             {
                 X += 8.0f;
@@ -60,7 +57,7 @@ namespace Igra_za_proektnu
                     start = false;
                 }
             } else
-            if ((X -= Vx) + sirina < 20) zaBrisenje = keseBrise = true;
+            if ((X -= Vx) + sirina < 20) ubien = izbrisi = true;
         }
     }
 }

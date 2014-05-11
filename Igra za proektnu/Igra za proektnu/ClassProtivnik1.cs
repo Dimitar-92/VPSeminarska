@@ -10,18 +10,16 @@ namespace Igra_za_proektnu
     public class ClassProtivnik1 : ClassProtivnik
     {
         private float Vx;
-        private System.Threading.Thread nitkaBrisi;
 
         public ClassProtivnik1()
         {
             sirina = 200;
             visina = 143;
-            zaBrisenje = keseBrise = false;
-            animacija = AllAnimations.enemy_run;
+            ubien = izbrisi = false;
+            animacija = AllAnimations.enemy_1_run;
             Vx = (float)GlavenPogled.rand.NextDouble() * 4 + 4;
-            nitkaBrisi = new System.Threading.Thread(new System.Threading.ThreadStart(CekajPaBrisi));
         }
-        
+
         override public bool Kontakt(ClassHeroj Covece)
         {
             return Math.Abs(Covece.X + Covece.sirina * 0.5f - X - sirina * 0.5f) < 0.4f * (Covece.sirina + sirina) && Y + 8.0f < Covece.Y + Covece.visina && Y + 18.0f + Covece.Vy > Covece.Y + Covece.visina && Covece.Vy > 0;
@@ -31,33 +29,21 @@ namespace Igra_za_proektnu
         {
             Covece.brSkoka = ClassHeroj.MaxSkoka;
             Covece.PocniSkok();
+            Covece.poeni += 10;
 
-            GlavenPogled.p = new ClassProtivnik3();
-            GlavenPogled.p.X = X;
-            GlavenPogled.p.Y = Y;
-            GlavenPogled.p.Vx = Vx;
-            GlavenPogled.p.DolnaLinija = Y + visina - GlavenPogled.p.visina;
+            GlavenPogled.generiranProtivnik = new ClassProtivnik3(X, Y, Vx, Y + visina);
 
-            zaBrisenje = true;
-            // i tuka stole:D
-            AllAnimations.enemy_dead.Reset();
-            animacija = AllAnimations.enemy_dead;
-            nitkaBrisi.Start();
-            Vx = GlavenPogled.brznPozd;
-            Covece.poeni +=10 ;
-            //Form1.ff.textBoxPoeni.Text = string.Format("{0} $", Covece.poeni);
-        }
-
-        private void CekajPaBrisi()
-        {
-            System.Threading.Thread.Sleep(768);
-            keseBrise = true;
-            nitkaBrisi.Abort();
+            sirina = 250;
+            visina = 175;
+            ubien = true;
+            animacija = AllAnimations.enemy_1_dead;
+            animacija.Restart();
         }
 
         override public void Pridvizi()
         {
-            if ((X -= Vx) + sirina < 20) zaBrisenje = keseBrise = true;
+            if (ubien && (Vx += 0.25f) > GlavenPogled.brznPozd) izbrisi = true;
+            if ((X -= Vx) + sirina < 20) ubien = izbrisi = true;
         }
     }
 }
