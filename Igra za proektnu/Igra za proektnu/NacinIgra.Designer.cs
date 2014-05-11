@@ -38,10 +38,10 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnNazad = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -93,8 +93,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(192, 112);
             this.textBox5.TabIndex = 9;
-            this.textBox5.Text = "Камен - пази каде трчаш, можеш да се сопнеш од некој камен ако не скокнеш на врем" +
-                "е!";
+            this.textBox5.Text = "Камен - пази каде трчаш, можеш да се сопнеш доколку не скокнеш на време!";
             // 
             // pictureBox5
             // 
@@ -113,9 +112,9 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(192, 128);
             this.textBox4.TabIndex = 7;
-            this.textBox4.Text = "Џејмс - американски маринец во нато иде во “мировна“ мисија, дури се тепаат израе" +
-                "лците и палестинците тој да се послужи со нивната нафта. Задолжително удираље со" +
-                " нога во неговата празна глава.";
+            this.textBox4.Text = "Џејмс - американски маринец во НАТО, оди во “мировна“ мисија, додека израелците и" +
+                " палестинците се тепаат, тој се послужува со нивната нафта, . Задолжително удира" +
+                "ње со нога во неговата празна глава.";
             // 
             // pictureBox4
             // 
@@ -164,9 +163,20 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(186, 112);
             this.textBox2.TabIndex = 2;
-            this.textBox2.Text = "Жевзет - бомбаш самоутепанац од Таџикистан, он го иде у џихат, ако пријде до тебе" +
-                " ке го активира експлозив и ке го пука! Заради тоа бегај од него шо подалеку (пр" +
-                "ескокни го).";
+            this.textBox2.Text = "Жевзет - бомбаш самоубиец од Таџикистан, тој оди во џихад, ако пријде до тебе ке " +
+                "активира експлозив и ќе пука! Поради тоа бегај што подалеку од него (прескокни г" +
+                "о).";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(378, 179);
+            this.textBox6.Multiline = true;
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(186, 106);
+            this.textBox6.TabIndex = 1;
+            this.textBox6.Text = "По ударот се распаѓа машинеријата, ама еден негов поданик успева да избега, тој е" +
+                " ситен плен, дури нема потреба ни да скокнеш за да го убиеш, доволно е да го пре" +
+                "газиш.";
             // 
             // textBox1
             // 
@@ -176,7 +186,7 @@
             this.textBox1.Size = new System.Drawing.Size(186, 144);
             this.textBox1.TabIndex = 1;
             this.textBox1.Text = "Капетан кука - седи во подвижно буре и сака да побегне, кога ке го стигнеш ѕвекни" +
-                " го во глаата, ама дали ке успееш само со еден скок.";
+                " го во глаата, ама дали ке успееш само со еден скок?!";
             // 
             // pictureBox1
             // 
@@ -202,17 +212,6 @@
             this.btnNazad.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNazad.UseVisualStyleBackColor = false;
             this.btnNazad.Click += new System.EventHandler(this.btnNazad_Click);
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(378, 179);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(186, 106);
-            this.textBox6.TabIndex = 1;
-            this.textBox6.Text = "По удирот се распаѓа машинеријата, ама еден негов поданик успева да избега, тој е" +
-                " ситен плен, дури немора ни да скокнеш за да го убиеш, доволно е да го прегазиш." +
-                "";
             // 
             // NacinIgra
             // 
