@@ -50,7 +50,14 @@ Kако што кажува и нејзиното име, таа е главна
 И како последно заради многу често извршување на оваа функција (30 ms) неможеме директно да додаваме противници и да ги освежуваме анимациите, тоа би било премногу често. Па заради тоа прескокнуваме по неколку такта за да го постигнеме саканата интервал, анимациите се освеѓуваат на секои 6 такта (6 * 30 ms = 180 ms), а противниците се генерираат на случајно генериран број тактови во интервалот од 0 до 10 пати по бројот на противниците кои ги имаме. Колку помалку противници имаме толку почесто ке се генерираат, ке се зголемува нивниот број, и обратно. Со што бројот на противниците го одржуваме во некоја средина.
 </p>
 Screens:
-
+![alt tag](https://raw.githubusercontent.com/Dimitar-92/VPSeminarska/master/Screens/igra1.png)
+![alt tag](https://raw.githubusercontent.com/Dimitar-92/VPSeminarska/master/Screens/igra2.png)
+![alt tag](https://raw.githubusercontent.com/Dimitar-92/VPSeminarska/master/Screens/igra3.png)
+![alt tag](https://raw.githubusercontent.com/Dimitar-92/VPSeminarska/master/Screens/napad1.png)
+![alt tag](https://raw.githubusercontent.com/Dimitar-92/VPSeminarska/master/Screens/napad2.png)
+![alt tag](https://raw.githubusercontent.com/Dimitar-92/VPSeminarska/master/Screens/novRekord.png)
+![alt tag](https://raw.githubusercontent.com/Dimitar-92/VPSeminarska/master/Screens/osnovenPogled.png)
+![alt tag](https://raw.githubusercontent.com/Dimitar-92/VPSeminarska/master/Screens/rekordi.png)
 ---
 Изработена од:<br />
 Димитар Јованов, Надежда Аврамовска, Столе Јовановски
