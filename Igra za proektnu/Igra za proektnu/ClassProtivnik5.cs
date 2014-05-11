@@ -22,14 +22,14 @@ namespace Igra_za_proektnu
             nitkaBrisi = new System.Threading.Thread(new System.Threading.ThreadStart(CekajPaBrisi));
         }
         
-        override public bool Kontakt(ClassCoveve Covece)
+        override public bool Kontakt(ClassHeroj Covece)
         {
             return Math.Abs(Covece.X + Covece.sirina * 0.5f - X - sirina * 0.5f) < 0.4f * (Covece.sirina + sirina) && Y + 8.0f < Covece.Y + Covece.visina && Y + 18.0f + Covece.Vy > Covece.Y + Covece.visina && Covece.Vy > 0;
         }
 
-        override public void Interakcija(ClassCoveve Covece)
+        override public void Interakcija(ClassHeroj Covece)
         {
-            Covece.brSkoka = ClassCoveve.MaxSkoka;
+            Covece.brSkoka = ClassHeroj.MaxSkoka;
             Covece.PocniSkok();
 
             Y -= 50;
@@ -41,7 +41,7 @@ namespace Igra_za_proektnu
             animacija = AllAnimations.enemy_5_dead;
             nitkaBrisi.Start();
             Vx = GlavenPogled.brznPozd;
-            ++Covece.poeni;
+            Covece.poeni += 15;
             //Form1.ff.textBoxPoeni.Text = string.Format("{0} $", Covece.poeni);
         }
 

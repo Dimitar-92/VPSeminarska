@@ -43,5 +43,22 @@ C:\Users\Dimitar\Downloads\VD LAB\Proektna\Igra za proektnu\Igra za proektnu\obj
 C:\Users\Dimitar\Downloads\VD LAB\Proektna\Igra za proektnu\Igra za proektnu\obj\x86\Debug\Igra za proektnu.exe
 C:\Users\Dimitar\Downloads\VD LAB\Proektna\Igra za proektnu\Igra za proektnu\obj\x86\Debug\Igra za proektnu.pdb
 C:\Users\Dimitar\Downloads\VD LAB\Proektna\Igra za proektnu\Igra za proektnu\obj\x86\Debug\Igra za proektnu.csprojResolveAssemblyReference.cache
+<<<<<<< HEAD
 C:\Users\Dimitar\Desktop\Dimitar\FINKI\Трета Летен\Визуелно Програмирање\Seminarska\Igra za proektnu\Igra za proektnu\obj\x86\Debug\Igra za proektnu.exe
 C:\Users\Dimitar\Desktop\Dimitar\FINKI\Трета Летен\Визуелно Програмирање\Seminarska\Igra za proektnu\Igra za proektnu\obj\x86\Debug\Igra za proektnu.pdb
+=======
+C:\Users\Nate\Desktop\VP Seminarska\VPSeminarska\Igra za proektnu\Igra za proektnu\obj\x86\Debug\Igra za proektnu.exe
+C:\Users\Nate\Desktop\VP Seminarska\VPSeminarska\Igra za proektnu\Igra za proektnu\obj\x86\Debug\Igra za proektnu.pdb
+C:\Users\Nate\Desktop\VP Seminarska\VPSeminarska\Igra za proektnu\Igra za proektnu\bin\Debug\Igra za proektnu.exe
+C:\Users\Nate\Desktop\VP Seminarska\VPSeminarska\Igra za proektnu\Igra za proektnu\bin\Debug\Igra za proektnu.pdb
+C:\Users\Nate\Desktop\VP Seminarska\VPSeminarska\Igra za proektnu\Igra za proektnu\obj\x86\Debug\Igra za proektnu.csprojResolveAssemblyReference.cache
+C:\Users\Nate\Desktop\VP Seminarska\VPSeminarska\Igra za proektnu\Igra za proektnu\obj\x86\Debug\Igra_za_proektnu.GlavenPogled.resources
+C:\Users\Nate\Desktop\VP Seminarska\VPSeminarska\Igra za proektnu\Igra za proektnu\obj\x86\Debug\Igra_za_proektnu.NacinIgra.resources
+C:\Users\Nate\Desktop\VP Seminarska\VPSeminarska\Igra za proektnu\Igra za proektnu\obj\x86\Debug\Igra_za_proektnu.OsnovenPogled.resources
+C:\Users\Nate\Desktop\VP Seminarska\VPSeminarska\Igra za proektnu\Igra za proektnu\obj\x86\Debug\Igra_za_proektnu.OsnovnaForma.resources
+C:\Users\Nate\Desktop\VP Seminarska\VPSeminarska\Igra za proektnu\Igra za proektnu\obj\x86\Debug\Igra_za_proektnu.Properties.Resources.resources
+C:\Users\Nate\Desktop\VP Seminarska\VPSeminarska\Igra za proektnu\Igra za proektnu\obj\x86\Debug\Igra_za_proektnu.Rekordi.resources
+C:\Users\Nate\Desktop\VP Seminarska\VPSeminarska\Igra za proektnu\Igra za proektnu\obj\x86\Debug\Igra za proektnu.csproj.GenerateResource.Cache
+C:\Users\Nate\Desktop\VP Seminarska\VPSeminarska\Igra za proektnu\Igra za proektnu\bin\Debug\Igra za proektnu.exe.config
+C:\Users\Nate\Desktop\VP Seminarska\VPSeminarska\Igra za proektnu\Igra za proektnu\obj\x86\Debug\Igra_za_proektnu.NovRekord.resources
+>>>>>>> 2750b4d849422e5a8dbeb9f8e9eb6e7b4ef4ecbc

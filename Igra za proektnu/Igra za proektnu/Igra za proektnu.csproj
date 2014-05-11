@@ -47,31 +47,31 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animacija.cs" />
-    <Compile Include="ClassCoveve.cs" />
+    <Compile Include="ClassHeroj.cs" />
     <Compile Include="ClassProtivnik.cs" />
     <Compile Include="ClassProtivnik5.cs" />
     <Compile Include="ClassProtivnik4.cs" />
     <Compile Include="ClassProtivnik1.cs" />
     <Compile Include="ClassProtivnik2.cs" />
     <Compile Include="Classprotivnik3.cs" />
-    <Compile Include="ClassVizuelenObiekt.cs" />
+    <Compile Include="ClassVisualObiect.cs" />
     <Compile Include="GlavenPogled.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GlavenPogled.Designer.cs">
       <DependentUpon>GlavenPogled.cs</DependentUpon>
     </Compile>
-    <Compile Include="IzberiSvojstva.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="IzberiSvojstva.Designer.cs">
-      <DependentUpon>IzberiSvojstva.cs</DependentUpon>
-    </Compile>
     <Compile Include="NacinIgra.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="NacinIgra.Designer.cs">
       <DependentUpon>NacinIgra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NovRekord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NovRekord.Designer.cs">
+      <DependentUpon>NovRekord.cs</DependentUpon>
     </Compile>
     <Compile Include="OsnovenPogled.cs">
       <SubType>UserControl</SubType>
@@ -97,11 +97,11 @@
     <EmbeddedResource Include="GlavenPogled.resx">
       <DependentUpon>GlavenPogled.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IzberiSvojstva.resx">
-      <DependentUpon>IzberiSvojstva.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="NacinIgra.resx">
       <DependentUpon>NacinIgra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NovRekord.resx">
+      <DependentUpon>NovRekord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OsnovenPogled.resx">
       <DependentUpon>OsnovenPogled.cs</DependentUpon>
@@ -122,6 +122,7 @@
     <EmbeddedResource Include="Rekordi.resx">
       <DependentUpon>Rekordi.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -135,13 +136,25 @@
   <ItemGroup>
     <None Include="Resources\zombie_walking_T.png" />
     <None Include="Resources\bomb-transparent-e1376962436128.png" />
+    <None Include="Resources\3d_sword.png" />
+    <None Include="Resources\apple.gif" />
+    <None Include="Resources\dvoen_skok.png" />
+    <None Include="Resources\dvoen_skok1.png" />
+    <None Include="Resources\edinecen_skok.png" />
+    <None Include="Resources\cveke_skok.png" />
     <Content Include="Resources\Eksplozija.gif" />
+    <None Include="Resources\frame.gif" />
+    <None Include="Resources\heroj_puska.png" />
     <Content Include="Resources\MAN RUNNING.gif" />
     <None Include="Resources\Image1.gif" />
     <None Include="Resources\Pozadina.gif" />
     <None Include="Resources\skok.gif" />
     <None Include="Resources\Pozadina1.gif" />
     <None Include="Resources\townscape.jpg" />
+    <None Include="Resources\puss.gif" />
+    <None Include="Resources\puss in boots.png" />
+    <None Include="Resources\progress.png" />
+    <None Include="Resources\skok.png" />
     <Content Include="Resources\zombie.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

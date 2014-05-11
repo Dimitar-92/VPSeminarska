@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace Igra_za_proektnu
 {
-    public abstract class ClassVizuelenObiekt
+    public abstract class ClassVisualObiect
     {
         public float X, Y, sirina, visina;
         public Animacija animacija;

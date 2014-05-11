@@ -8,7 +8,7 @@ using System.Threading;
 
 namespace Igra_za_proektnu
 {
-    public class ClassCoveve : ClassVizuelenObiekt
+    public class ClassHeroj : ClassVisualObiect
     {
         public const int MaxVy = 16;
         public const int MaxSkoka = 2; // const ???
@@ -18,19 +18,20 @@ namespace Igra_za_proektnu
         public int Vy;
         public int brSkoka;
         public int poeni;
-        public int krv;
+        public int energija;
         private bool skoka;
 
-        public ClassCoveve()
+        public ClassHeroj()
         {
             Vy = 0;
-            krv = 100;
+            energija = 100;
             poeni = 0;
             skoka = false;
             sirina = 128;
             visina = 107;
             brSkoka = MaxSkoka;
             animacija = AllAnimations.main_run;
+            //krv = blood;
         }
 
         public void PocniSkok()

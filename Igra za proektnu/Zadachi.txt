@@ -1,12 +1,13 @@
-razlicni izgledi na prozorecot ke go pravime vo razlicni prozori/Formi
-lenta za informacii (krv, poeni...)
+
 i sekako najvaznoto... statistika na poeni
 Zacuvuvanje na 10 najdobri igraci
 Smrt na Golemi i so puskite
-Nate da ne prijavi za igrata
 Github 2 commits
 
 Prasanja tomce:
 
-Nozete podseceni
+Nozete potseceni
 Trepkanje na paneli...
+Dime da najde druga slika za bomba (da odgovara na stilot)
+Site paneli da bidat so golemina kolku formata( da se vgnezduvaat vo nea)
+README- staven e samo proben, ima celosen word doc

@@ -31,48 +31,60 @@
             this.btnRekordi = new System.Windows.Forms.Button();
             this.btnPocni = new System.Windows.Forms.Button();
             this.btnNacinIgra = new System.Windows.Forms.Button();
-            this.btnIzberiSvojstva = new System.Windows.Forms.Button();
+            this.btnZatvori = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnRekordi
             // 
-            this.btnRekordi.Location = new System.Drawing.Point(305, 276);
+            this.btnRekordi.BackgroundImage = global::Igra_za_proektnu.Properties.Resources.puss;
+            this.btnRekordi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRekordi.Location = new System.Drawing.Point(583, 36);
             this.btnRekordi.Name = "btnRekordi";
-            this.btnRekordi.Size = new System.Drawing.Size(200, 30);
+            this.btnRekordi.Size = new System.Drawing.Size(283, 157);
             this.btnRekordi.TabIndex = 4;
-            this.btnRekordi.Text = "Rekordi";
+            this.btnRekordi.Text = "Рекорди";
+            this.btnRekordi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRekordi.UseVisualStyleBackColor = true;
             this.btnRekordi.Click += new System.EventHandler(this.btnRekordi_Click);
             // 
             // btnPocni
             // 
-            this.btnPocni.Location = new System.Drawing.Point(305, 150);
+            this.btnPocni.BackgroundImage = global::Igra_za_proektnu.Properties.Resources.puss;
+            this.btnPocni.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPocni.Location = new System.Drawing.Point(259, 36);
             this.btnPocni.Name = "btnPocni";
-            this.btnPocni.Size = new System.Drawing.Size(200, 30);
+            this.btnPocni.Size = new System.Drawing.Size(283, 157);
             this.btnPocni.TabIndex = 3;
-            this.btnPocni.Text = "Pocetok";
+            this.btnPocni.Text = "Нова игра";
+            this.btnPocni.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPocni.UseVisualStyleBackColor = true;
             this.btnPocni.Click += new System.EventHandler(this.btnPocni_Click);
             // 
             // btnNacinIgra
             // 
-            this.btnNacinIgra.Location = new System.Drawing.Point(305, 240);
+            this.btnNacinIgra.BackgroundImage = global::Igra_za_proektnu.Properties.Resources.puss;
+            this.btnNacinIgra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNacinIgra.Location = new System.Drawing.Point(259, 219);
             this.btnNacinIgra.Name = "btnNacinIgra";
-            this.btnNacinIgra.Size = new System.Drawing.Size(200, 30);
+            this.btnNacinIgra.Size = new System.Drawing.Size(283, 157);
             this.btnNacinIgra.TabIndex = 6;
-            this.btnNacinIgra.Text = "Nacin na igranje";
+            this.btnNacinIgra.Text = "Начин на играње";
+            this.btnNacinIgra.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNacinIgra.UseVisualStyleBackColor = true;
             this.btnNacinIgra.Click += new System.EventHandler(this.btnNacinIgra_Click);
             // 
-            // btnIzberiSvojstva
+            // btnZatvori
             // 
-            this.btnIzberiSvojstva.Location = new System.Drawing.Point(305, 186);
-            this.btnIzberiSvojstva.Name = "btnIzberiSvojstva";
-            this.btnIzberiSvojstva.Size = new System.Drawing.Size(200, 30);
-            this.btnIzberiSvojstva.TabIndex = 7;
-            this.btnIzberiSvojstva.Text = "Svojstva";
-            this.btnIzberiSvojstva.UseVisualStyleBackColor = true;
-            this.btnIzberiSvojstva.Click += new System.EventHandler(this.btnIzberiSvojstva_Click);
+            this.btnZatvori.BackgroundImage = global::Igra_za_proektnu.Properties.Resources.puss;
+            this.btnZatvori.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnZatvori.Location = new System.Drawing.Point(583, 219);
+            this.btnZatvori.Name = "btnZatvori";
+            this.btnZatvori.Size = new System.Drawing.Size(283, 157);
+            this.btnZatvori.TabIndex = 7;
+            this.btnZatvori.Text = "Затвори";
+            this.btnZatvori.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnZatvori.UseVisualStyleBackColor = true;
+            this.btnZatvori.Click += new System.EventHandler(this.btnZatvori_Click);
             // 
             // OsnovenPogled
             // 
@@ -80,12 +92,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Controls.Add(this.btnIzberiSvojstva);
+            this.Controls.Add(this.btnZatvori);
             this.Controls.Add(this.btnNacinIgra);
             this.Controls.Add(this.btnRekordi);
             this.Controls.Add(this.btnPocni);
             this.Name = "OsnovenPogled";
-            this.Size = new System.Drawing.Size(526, 324);
+            this.Size = new System.Drawing.Size(922, 456);
             this.ResumeLayout(false);
 
         }
@@ -95,6 +107,6 @@
         private System.Windows.Forms.Button btnRekordi;
         private System.Windows.Forms.Button btnPocni;
         private System.Windows.Forms.Button btnNacinIgra;
-        private System.Windows.Forms.Button btnIzberiSvojstva;
+        private System.Windows.Forms.Button btnZatvori;
     }
 }

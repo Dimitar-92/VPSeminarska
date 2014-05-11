@@ -25,13 +25,12 @@ namespace Igra_za_proektnu.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Setting {
+        public global::System.Collections.Specialized.StringCollection players {
             get {
-                return ((string)(this["Setting"]));
+                return ((global::System.Collections.Specialized.StringCollection)(this["players"]));
             }
             set {
-                this["Setting"] = value;
+                this["players"] = value;
             }
         }
     }

@@ -5,12 +5,12 @@ using System.Text;
 
 namespace Igra_za_proektnu
 {
-    public abstract class ClassProtivnik : ClassVizuelenObiekt
+    public abstract class ClassProtivnik : ClassVisualObiect
     {
         public bool zaBrisenje;
         public bool keseBrise;
 
-        public abstract bool Kontakt(ClassCoveve x);
-        public abstract void Interakcija(ClassCoveve x);
+        public abstract bool Kontakt(ClassHeroj x);
+        public abstract void Interakcija(ClassHeroj x);
     }
 }
