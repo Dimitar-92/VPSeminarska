@@ -33,7 +33,7 @@ namespace Igra_za_proektnu
             Covece.PocniSkok();
 
             zaBrisenje = true;
-            //animacija = Properties.Resources.zombie_walking_T;
+            animacija = AllAnimations.enemy_4_run;
             nitkaBrisi.Start();
             Vx = GlavenPogled.brznPozd;
             Covece.poeni += 30;

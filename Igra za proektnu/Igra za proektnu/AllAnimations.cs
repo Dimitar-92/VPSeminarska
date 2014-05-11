@@ -63,6 +63,7 @@ namespace Igra_za_proektnu
             enemy_3_run.SlednaSlika();
             enemy_3_dead.SlednaSlika();
             enemy_4_run.SlednaSlika();
+            enemy_4_dead.SlednaSlika();
             enemy_5_run.SlednaSlika();
             enemy_5_dead.SlednaSlika();
         }
