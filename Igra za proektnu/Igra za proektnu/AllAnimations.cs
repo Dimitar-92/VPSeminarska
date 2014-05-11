@@ -10,6 +10,7 @@ namespace Igra_za_proektnu
         public static Animacija main_run;
         public static Animacija main_jump;
         public static Animacija enemy_run;
+        public static Animacija enemy_dead;
         public static Animacija enemy_2_stand;
         public static Animacija enemy_2_dead;
         public static Animacija enemy_3_run;
@@ -29,6 +30,9 @@ namespace Igra_za_proektnu
             enemy_run = new Animacija(new string[] { "images/protivnik_1/run/1.png", "images/protivnik_1/run/2.png",
                 "images/protivnik_1/run/3.png", "images/protivnik_1/run/4.png", "images/protivnik_1/run/5.png"},
                 true);
+            enemy_dead = new Animacija(new string[] { "images/protivnik_1/dead/1.png", "images/protivnik_1/dead/2.png",
+                "images/protivnik_1/dead/3.png"},
+                false);
             enemy_2_stand = new Animacija(new string[] { "images/protivnik_2/stand/1.png"},
                 true);
             enemy_2_dead = new Animacija(new string[] { "images/protivnik_2/dead/1.png", "images/protivnik_2/dead/2.png",
@@ -58,6 +62,7 @@ namespace Igra_za_proektnu
             main_run.SlednaSlika();
             main_jump.SlednaSlika();
             enemy_run.SlednaSlika();
+            enemy_dead.SlednaSlika();
             enemy_2_stand.SlednaSlika();
             enemy_2_dead.SlednaSlika();
             enemy_3_run.SlednaSlika();

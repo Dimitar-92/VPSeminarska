@@ -34,6 +34,7 @@ namespace Igra_za_proektnu
 
             sirina = 140;
             visina = 200;
+            //STOLE NEZNAM SO SE DESAVA SO VX:D Probav da podesam dimenzii ama ne mi izgledaat ok vidi
             Vx = -100;
             zaBrisenje = true;
             animacija = AllAnimations.enemy_4_dead;

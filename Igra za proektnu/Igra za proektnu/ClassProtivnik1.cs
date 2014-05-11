@@ -39,7 +39,9 @@ namespace Igra_za_proektnu
             GlavenPogled.p.DolnaLinija = Y + visina - GlavenPogled.p.visina;
 
             zaBrisenje = true;
-            //animacija = Properties.Resources.zombie_walking_T;
+            // i tuka stole:D
+            AllAnimations.enemy_dead.Reset();
+            animacija = AllAnimations.enemy_dead;
             nitkaBrisi.Start();
             Vx = GlavenPogled.brznPozd;
             Covece.poeni +=10 ;
