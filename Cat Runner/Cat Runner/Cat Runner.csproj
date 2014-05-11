@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8A98AC0C-172F-400A-95BC-7C78F063E7F5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cat_Runner</RootNamespace>
+    <AssemblyName>Cat Runner</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Animacija.cs" />
+    <Compile Include="ClassHeroj.cs" />
+    <Compile Include="ClassProtivnik.cs" />
+    <Compile Include="ClassProtivnik5.cs" />
+    <Compile Include="ClassProtivnik4.cs" />
+    <Compile Include="ClassProtivnik1.cs" />
+    <Compile Include="ClassProtivnik2.cs" />
+    <Compile Include="Classprotivnik3.cs" />
+    <Compile Include="ClassVizuelenObjekt.cs" />
+    <Compile Include="GlavenPogled.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GlavenPogled.Designer.cs">
+      <DependentUpon>GlavenPogled.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NacinIgra.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NacinIgra.Designer.cs">
+      <DependentUpon>NacinIgra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NovRekord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NovRekord.Designer.cs">
+      <DependentUpon>NovRekord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OsnovenPogled.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OsnovenPogled.Designer.cs">
+      <DependentUpon>OsnovenPogled.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OsnovnaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OsnovnaForma.Designer.cs">
+      <DependentUpon>OsnovnaForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="ProgressEnergy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AllAnimations.cs" />
+    <Compile Include="Rekordi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Rekordi.Designer.cs">
+      <DependentUpon>Rekordi.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="GlavenPogled.resx">
+      <DependentUpon>GlavenPogled.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NacinIgra.resx">
+      <DependentUpon>NacinIgra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NovRekord.resx">
+      <DependentUpon>NovRekord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OsnovenPogled.resx">
+      <DependentUpon>OsnovenPogled.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OsnovnaForma.resx">
+      <DependentUpon>OsnovnaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Rekordi.resx">
+      <DependentUpon>Rekordi.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frame.gif" />
+    <None Include="Resources\puss.gif" />
+    <None Include="Resources\puss in boots.png" />
+    <None Include="Resources\progress.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
