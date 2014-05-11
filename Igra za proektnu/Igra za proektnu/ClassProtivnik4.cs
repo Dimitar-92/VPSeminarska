@@ -32,8 +32,12 @@ namespace Igra_za_proektnu
             Covece.brSkoka = ClassHeroj.MaxSkoka;
             Covece.PocniSkok();
 
+            sirina = 140;
+            visina = 200;
+            Vx = -100;
             zaBrisenje = true;
-            animacija = AllAnimations.enemy_4_run;
+            animacija = AllAnimations.enemy_4_dead;
+            AllAnimations.enemy_4_dead.Reset();
             nitkaBrisi.Start();
             Vx = GlavenPogled.brznPozd;
             Covece.poeni += 30;
