@@ -15,6 +15,7 @@ namespace Igra_za_proektnu
         public static Animacija enemy_3_run;
         public static Animacija enemy_3_dead;
         public static Animacija enemy_4_run;
+        public static Animacija enemy_4_dead;
         public static Animacija enemy_5_run;
         public static Animacija enemy_5_dead;
 
@@ -41,6 +42,9 @@ namespace Igra_za_proektnu
                 false);
             enemy_4_run = new Animacija(new string[] { "images/protivnik_4/run/1.png", "images/protivnik_4/run/2.png" },
                 true);
+            enemy_4_dead = new Animacija(new string[] { "images/protivnik_4/dead/1.png", "images/protivnik_4/dead/2.png",
+            "images/protivnik_4/dead/3.png"},
+                false);
             enemy_5_run = new Animacija(new string[] { "images/protivnik_5/run/1.png", "images/protivnik_5/run/2.png",
                 "images/protivnik_5/run/3.png" },
                 true);
